@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'user-management-auth',
         'USER':'postgres',
-        'PASSWORD':'admin',
+        'PASSWORD':'postgres',
         'HOST':'localhost',
         'PORT':'5433'
     }
@@ -129,5 +130,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+LOGIN_REDIRECT_URL='/home'
+LOGOUT_REDIRECT_URL='/login'
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
