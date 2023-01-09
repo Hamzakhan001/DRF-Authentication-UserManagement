@@ -14,3 +14,5 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title + "\n"+ self.description
+    class Meta:
+        db_table = 'Post'
